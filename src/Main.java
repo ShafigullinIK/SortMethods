@@ -27,7 +27,10 @@ public class Main {
         testQuickSort(array3);
 //        System.out.println(array[stat]);
 //        System.out.println(mSortedArray[stat]);
-        testRadixSort(array4);
+
+        //Передача функции в качестве параметра
+        Tester.testSort(array4, AnotherSortMethods::radixSort, "radixSort");
+
         System.out.println(array3[stat]);
         long start = System.currentTimeMillis();
         int result = SerchMethods.quickSearch(array4,
