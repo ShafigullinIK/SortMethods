@@ -4,7 +4,7 @@ import java.util.Random;
 public class Main {
 
     public static void main(String[] args) {
-        checkSortMethods(50_000_000);
+        checkSortMethods(10_000_000);
 //        int[] array = genArray(100);
 //        array = AnotherSortMethods.radixSort(array, 9);
 //        System.out.println(Arrays.toString(array));
@@ -61,7 +61,7 @@ public class Main {
         Random r = new Random();
         int[] result = new int[n];
         for (int i = 0; i < n; i++) {
-            result[i] = r.nextInt(10);
+            result[i] = r.nextInt(10000000);
         }
         return result;
     }
@@ -144,7 +144,8 @@ public class Main {
         return merge(left, right);                  //
 
     }
-    // вспомогательный методя для сортировки слиянием
+
+    // вспомогательный метод для сортировки слиянием
     public static int[] merge(int[] left, int[] right) {
         int[] result = new int[left.length + right.length];
         int lIndex = 0;

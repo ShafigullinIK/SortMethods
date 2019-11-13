@@ -46,9 +46,17 @@ public class AnotherSortMethods {
     }
 
     public static int getRadix(int number, int index){
-        int divider = (int) Math.pow(10, index);
+        /*int divider = (int) Math.pow(10, index);
         int temp = number / divider;
-        return temp % 10;
+        return temp % 10;*/
+
+        // Поскольку функция Math.pow() крайне медлительна,
+        // ее лучше не использовать для возведения
+        // целых чисел в целую степень.
+        for (int i = 0; i < index; i++) {
+            number /= 10;
+        }
+        return number % 10;
     }
 
 }
