@@ -4,7 +4,7 @@ import java.util.Random;
 public class Main {
 
     public static void main(String[] args) {
-        checkSortMethods(50_000_000);
+        checkSortMethods(71_000_000);
 //        int[] array = genArray(100);
 //        array = AnotherSortMethods.radixSort(array, 9);
 //        System.out.println(Arrays.toString(array));
@@ -14,18 +14,27 @@ public class Main {
         int[] array = genArray(n);
         int[] array2 = Arrays.copyOf(array, array.length);
         int[] array3 = Arrays.copyOf(array, array.length);
-        int[] arrayR = Arrays.copyOf(array, array.length);
+        int[] array4 = Arrays.copyOf(array, array.length);
 //        int[] array4 = new int[n];
 //        for (int i = 0; i < n; i++) {
 //            array4[i] = n - i;
 //        }
 //        int[] array5 = Arrays.copyOf(array4, array4.length);
 //        int[] array6 = Arrays.copyOf(array4, array4.length);
-
-        testHeapSort(array);
-        testMergeSort(array2);
+        int stat = 159834;
+//        testHeapSort(array);
+//        int[] mSortedArray = testMergeSort(array2);
         testQuickSort(array3);
-        testRadixSort(arrayR);
+//        System.out.println(array[stat]);
+//        System.out.println(mSortedArray[stat]);
+        System.out.println(array3[stat]);
+        long start = System.currentTimeMillis();
+        int result = SerchMethods.quickSearch(array4,
+                0, array4.length,
+                stat);
+        long finish = System.currentTimeMillis();
+        System.out.println("Время поиска =  " + (finish - start));
+        System.out.println(result);
 
     }
 
@@ -36,11 +45,12 @@ public class Main {
         System.out.println("heapSort = " + (finish - start));
     }
 
-    public static void testMergeSort(int[] array) {
+    public static int[] testMergeSort(int[] array) {
         long start = System.currentTimeMillis();
-        mergeSort(array);
+        int[] sorted_array = mergeSort(array);
         long finish = System.currentTimeMillis();
         System.out.println("mergeSort = " + (finish - start));
+        return sorted_array;
     }
 
     public static void testQuickSort(int[] array) {
@@ -61,7 +71,7 @@ public class Main {
         Random r = new Random();
         int[] result = new int[n];
         for (int i = 0; i < n; i++) {
-            result[i] = r.nextInt(10);
+            result[i] = r.nextInt(10_000_000);
         }
         return result;
     }
