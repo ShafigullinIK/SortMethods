@@ -27,6 +27,7 @@ public class Main {
         testQuickSort(array3);
 //        System.out.println(array[stat]);
 //        System.out.println(mSortedArray[stat]);
+        testRadixSort(array4);
         System.out.println(array3[stat]);
         long start = System.currentTimeMillis();
         int result = SerchMethods.quickSearch(array4,
@@ -154,7 +155,7 @@ public class Main {
         return merge(left, right);                  //
 
     }
-    // вспомогательный методя для сортировки слиянием
+    // вспомогательный метод для сортировки слиянием
     public static int[] merge(int[] left, int[] right) {
         int[] result = new int[left.length + right.length];
         int lIndex = 0;
