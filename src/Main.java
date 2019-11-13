@@ -155,7 +155,6 @@ public class Main {
         return merge(left, right);                  //
 
     }
-
     // вспомогательный метод для сортировки слиянием
     public static int[] merge(int[] left, int[] right) {
         int[] result = new int[left.length + right.length];
