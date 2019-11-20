@@ -28,7 +28,7 @@ public class Main {
 
         System.out.println(array3[stat]);
         long start = System.currentTimeMillis();
-        int result = QuickSearch.quickSearch(array4,
+        int result = QuickSearch.quickSearch(array5,
                 0, array5.length,
                 stat);
         long finish = System.currentTimeMillis();
