@@ -42,7 +42,7 @@ public class Main {
         Random r = new Random();
         int[] result = new int[n];
         for (int i = 0; i < n; i++) {
-            result[i] = r.nextInt(10_000_000);
+            result[i] = r.nextInt(99_000_000);
         }
         return result;
     }
