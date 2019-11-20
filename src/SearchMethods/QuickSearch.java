@@ -2,7 +2,7 @@ package SearchMethods;
 
 import java.util.Random;
 
-public class SerchMethods {
+public class QuickSearch {
 
 	public static void main(String[] args) {
 		int[] array = new int[50];
