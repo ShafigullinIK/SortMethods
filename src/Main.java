@@ -1,6 +1,3 @@
-import java.util.Arrays;
-import java.util.Random;
-
 import AnotherSortMethods.*;
 import SearchMethods.QuickSearch;
 import SortMethods.*;
