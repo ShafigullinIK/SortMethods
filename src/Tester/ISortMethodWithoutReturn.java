@@ -1,5 +1,5 @@
 package Tester;
 
-public interface ISotrMethodWithoutReturn {
+public interface ISortMethodWithoutReturn {
     void sort(int[] array);
 }

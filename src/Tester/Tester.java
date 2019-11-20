@@ -15,7 +15,7 @@ public class Tester {
         System.out.println("Time for " + title + " = " + (finish - start));
     }
 
-    public static void testSort(int[] array, ISotrMethodWithoutReturn f, String title) {
+    public static void testSort(int[] array, ISortMethodWithoutReturn f, String title) {
         long start = System.currentTimeMillis();
         f.sort(array);
         long finish = System.currentTimeMillis();
