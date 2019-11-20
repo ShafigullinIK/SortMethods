@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 import AnotherSortMethods.*;
-import SearchMethods.SerchMethods;
+import SearchMethods.QuickSearch;
 import SortMethods.*;
 import Tester.*;
 
@@ -26,7 +26,7 @@ public class Main {
 
         System.out.println(array3[stat]);
         long start = System.currentTimeMillis();
-        int result = SerchMethods.quickSearch(array4,
+        int result = QuickSearch.quickSearch(array4,
                 0, array4.length,
                 stat);
         long finish = System.currentTimeMillis();
